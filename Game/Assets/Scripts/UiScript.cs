@@ -1,44 +1,39 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UiScript : MonoBehaviour
 {
-    private TextScript textScript = new();
     private ButtonScript buttonScript = new();
     [SerializeField] private GameObject inventory;
     [SerializeField] private GameObject itemPrefab;
-    public void InventoryOpen()
+    public void OnClickInventoryOpen()
     {
-        textScript.OnClickOpenInventory(inventory);
+        buttonScript.OpenInventory(inventory);
     }
-    public void InventoryClose()
+    public void OnClickInventoryClose()
     {
-        textScript.OnClickCloseInventory(inventory);
+        buttonScript.CloseInventory(inventory);
     }
-    public void AddItem()
+    public void OnClickAddItem()
     {
-        buttonScript.OnClickAddItem(itemPrefab);
-    }
-}
-public class TextScript
-{
-    public void OnClickOpenInventory(GameObject inventory)
-    {
-        inventory.SetActive(true);
-    }
-    public void OnClickCloseInventory(GameObject inventory)
-    {
-        inventory.SetActive(false);
+        buttonScript.AddItem(itemPrefab);
     }
 }
 public class ButtonScript
 {
-    public void OnClickAddItem(GameObject prefab)
+    public void OpenInventory(GameObject inventory)
+    {
+        inventory.SetActive(true);
+    }
+    public void CloseInventory(GameObject inventory)
+    {
+        inventory.SetActive(false);
+    }
+    public void AddItem(GameObject prefab)
     {
 
     }
 }
-public class ImageScript
+public class ItemScript
 {
     
 }
