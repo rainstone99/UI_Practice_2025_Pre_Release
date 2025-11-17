@@ -759,7 +759,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 544186012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 870220418}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &544186012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,8 +1279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1006b2b654e7ee0498fa9c3b8a64c79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  inventoryTap: {fileID: 1513732049}
+  itemPrefab: {fileID: 6141370956782965864, guid: ae463f5c5e2b93d4781a7145b7fbd138, type: 3}
 --- !u!4 &870220420
 Transform:
   m_ObjectHideFlags: 0
@@ -3803,11 +3815,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 870220419}
         m_TargetAssemblyTypeName: UiScript, Assembly-CSharp
-        m_MethodName: OnClickCloseInventory
-        m_Mode: 2
+        m_MethodName: OnClickInventoryClose
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1513732049}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3939,7 +3951,7 @@ GameObject:
   - component: {fileID: 2033576088}
   - component: {fileID: 2033576087}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Inventory(Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4010,11 +4022,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 870220419}
         m_TargetAssemblyTypeName: UiScript, Assembly-CSharp
-        m_MethodName: OnClickOpenInventory
-        m_Mode: 2
+        m_MethodName: OnClickInventoryOpen
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1513732049}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

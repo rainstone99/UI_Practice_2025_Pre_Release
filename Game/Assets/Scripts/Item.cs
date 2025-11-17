@@ -5,6 +5,7 @@ public class Item : ScriptableObject
 {
     public string itemName;
     public Sprite itemImage;
+    public GameObject itemPrefab;
     public ItemType itemtype;
     public enum ItemType
     {
@@ -14,6 +15,6 @@ public class Item : ScriptableObject
         Scraps, //잡동사니 << 판매 용도
         Quest //퀘스트(중요아이템) << 판매불가로 설정
     }
-    public bool tradeAble;
-    
+    public bool tradeable = true;
+
 }

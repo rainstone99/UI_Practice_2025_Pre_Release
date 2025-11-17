@@ -1,21 +1,22 @@
 using UnityEngine;
 
-public class UiScript : MonoBehaviour
+public class UiScript : MonoBehaviour 
 {
     private ButtonScript buttonScript = new();
-    [SerializeField] private GameObject inventory;
+    public InventoryScript inventoryScript = new();
+    [SerializeField] private GameObject inventoryTap;
     [SerializeField] private GameObject itemPrefab;
     public void OnClickInventoryOpen()
     {
-        buttonScript.OpenInventory(inventory);
+        buttonScript.OpenInventory(inventoryTap);
     }
     public void OnClickInventoryClose()
     {
-        buttonScript.CloseInventory(inventory);
+        buttonScript.CloseInventory(inventoryTap);
     }
     public void OnClickAddItem()
     {
-        buttonScript.AddItem(itemPrefab);
+        inventoryScript.AddItem(itemPrefab);
     }
 }
 public class ButtonScript
@@ -28,12 +29,15 @@ public class ButtonScript
     {
         inventory.SetActive(false);
     }
-    public void AddItem(GameObject prefab)
-    {
 
-    }
 }
-public class ItemScript
+public class InventoryScript
 {
+    public Item Item {get; set;}
+    public int ItemCount {get; set;}
     
+    public void AddItem(GameObject prefab) // Monobehaviour를 상속받지 않으므로 기존의 Instantiate 사용이 안 됨
+    {
+        GameObject newItem = Instantiate(prefab);
+    }
 }
