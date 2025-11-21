@@ -243,6 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   itemCount: 0
+  itemCountLimit: 3
+  isCountMax: 0
   itemImage: {fileID: 580831419684768419}
   textCount: {fileID: 990756748851278418}
   isCounting: {fileID: 917241926981234864}

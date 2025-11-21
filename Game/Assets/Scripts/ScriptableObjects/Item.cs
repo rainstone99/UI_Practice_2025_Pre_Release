@@ -16,5 +16,4 @@ public class Item : ScriptableObject
         Quest //퀘스트(중요아이템) << 판매불가로 설정
     }
     public bool tradeable = true;
-
 }
