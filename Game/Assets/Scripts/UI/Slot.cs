@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Pool;
 
 public class Slot : MonoBehaviour, 
 IPointerClickHandler, 
@@ -13,9 +14,10 @@ IDropHandler
     public Item item; // 아이템 정보 불러오기
     public int itemCount; // 아이템 개수
     public int itemCountLimit;
-    public bool isCountMax = false;
+    [HideInInspector] public bool isCountMax = false;
     public Image itemImage; // 아이템 이미지
     private Vector2 firstPos;
+    public IObjectPool<GameObject> Pool { get; set; } // Pool 기능 사용을 위한 선언
 
     //받아올 오브젝트
     [SerializeField]
